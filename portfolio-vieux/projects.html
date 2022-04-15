@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Sophie Ro projects </title>
+</head>
+
+<body>
+    <!-- header  -->
+    <header>
+        <div class="menu-btn">
+            <span class="menu-btn-burger"></span>
+        </div>
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav_item">
+                    <a href="index.html" class="menu-nav_link">Home</a>
+                </li>
+                <li class="menu-nav_item ">
+                    <a href="about.html" class="menu-nav_link">About Me</a>
+                </li>
+                <li class="menu-nav_item active">
+                    <a href="projects.html" class="menu-nav_link">My Projects</a>
+                </li>
+                <li class="menu-nav_item">
+                    <a href="contact.html" class="menu-nav_link">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- main -->
+    <main>
+        <section class="projects">
+            <div class="projects_img">
+                <h1 class="text-secondary">
+                    My Projects
+                </h1>
+            </div>
+            <!-- ! project page  -->
+            <div class="projects-items">
+                <!-- p1 -->
+                <div class="projects-item">
+                    <img src="/img/projects/adult-architect-architectural-design-1260309.jpg
+                    " alt="">
+                    <div class="projects-btns">
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-github"></i> Github
+                        </a>
+
+                    </div>
+                </div>
+                <!-- p2 -->
+                <div class="projects-item">
+                    <img src="/img/projects/adult-blank-busy-1559050.jpg" alt="">
+                    <div class="projects-btns">
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-github"></i> Github
+                        </a>
+
+                    </div>
+                </div>
+                <!-- p3 -->
+                <div class="projects-item">
+                    <img src="/img/projects/blueprint-company-concept-7366.jpg" alt="">
+                    <div class="projects-btns">
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-github"></i> Github
+                        </a>
+
+                    </div>
+                </div>
+                <!-- p4 -->
+                <div class="projects-item">
+                    <img src="/img/projects/blur-code-coding-270408.jpg" alt="">
+                    <div class="projects-btns">
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-github"></i> Github
+                        </a>
+
+                    </div>
+                </div>
+                <!-- p5 -->
+                <div class="projects-item">
+                    <img src="/img/projects/code-coding-conceptual-270360.jpg" alt="">
+                    <div class="projects-btns">
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-github"></i> Github
+                        </a>
+
+                    </div>
+                </div>
+                <!-- p6 -->
+                <div class="projects-item">
+                    <img src="/img/projects/codes-coding-communication-360591.jpg" alt="">
+                    <div class="projects-btns">
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-eye"></i> Preview
+                        </a>
+                        <a href="#" class="projects-btn">
+                            <i class="fa fa-github"></i> Github
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- end of projects  -->
+            </div>
+            <!-- social icons  -->
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-facebook fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-instagram fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
+            </div>
+            <!-- footer  -->
+            <footer>&copy; Copyright 2019</footer>
+        </section>
+    </main>
+
+    <!-- javascript  -->
+
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const hamburger = document.querySelector(".menu-btn-burger");
+        const nav = document.querySelector('.nav');
+        const menuNav = document.querySelector('.menu-nav');
+        const navItems = document.querySelectorAll('.menu-nav_item');
+
+        let showMenu = false;
+
+        menuBtn.addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            if (!showMenu) {
+                hamburger.classList.add("open");
+                nav.classList.add('open');
+                menuNav.classList.add('open');
+                navItems.forEach(item => {
+                    item.classList.add('open')
+
+                });
+                showMenu = true;
+            } else {
+                hamburger.classList.remove("open");
+                nav.classList.remove('open');
+                menuNav.classList.remove('open');
+                navItems.forEach(item => {
+                    item.classList.remove('open')
+
+                });
+                showMenu = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

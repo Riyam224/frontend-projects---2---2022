@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>About Me</title>
+</head>
+
+<body>
+    <!-- header  -->
+    <header>
+        <div class="menu-btn">
+            <span class="menu-btn-burger"></span>
+        </div>
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav_item">
+                    <a href="index.html" class="menu-nav_link">Home</a>
+                </li>
+                <li class="menu-nav_item active">
+                    <a href="about.html" class="menu-nav_link">About Me</a>
+                </li>
+                <li class="menu-nav_item">
+                    <a href="projects.html" class="menu-nav_link">My Projects</a>
+                </li>
+                <li class="menu-nav_item">
+                    <a href="contact.html" class="menu-nav_link">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- main -->
+    <main>
+        <section class="about">
+            <div class="about_img">
+                <div class="about-bio">
+                    <h2 class="text-secondary">BIO</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod tempore odio aliquid repellat vel
+                        odit, laudantium, quis perferendis veritatis quibusdam, incidunt neque vitae accusantium sequi
+                        facere ad praesentium consequuntur culpa?</p>
+                </div>
+            </div>
+            <div class="jobs">
+                <div class="jobs-job">
+                    <h2 class="text-secondary">2017 - current</h2>
+                    <h3>Google </h3>
+                    <h6>Full Stack Developer</h6>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab incidunt quisquam illum nesciunt
+                        iste debitis dolor doloribus dicta! Porro, ipsa.</p>
+                </div>
+                <div class="jobs-job">
+                    <h2 class="text-secondary">2015 - 2017</h2>
+                    <h3>Microsoft </h3>
+                    <h6>Front End Developer</h6>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab incidunt quisquam illum nesciunt
+                        iste debitis dolor doloribus dicta! Porro, ipsa.</p>
+                </div>
+                <div class="jobs-job">
+                    <h2 class="text-secondary">2010 - 2017</h2>
+                    <h3>Web Design Co. </h3>
+                    <h6>Graphic Designer</h6>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab incidunt quisquam illum nesciunt
+                        iste debitis dolor doloribus dicta! Porro, ipsa.</p>
+                </div>
+            </div>
+            <!-- social icons  -->
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-facebook fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-instagram fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
+            </div>
+            <!-- footer  -->
+            <footer>&copy; Copyright 2019</footer>
+        </section>
+    </main>
+
+    <!-- javascript  -->
+
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const hamburger = document.querySelector(".menu-btn-burger");
+        const nav = document.querySelector('.nav');
+        const menuNav = document.querySelector('.menu-nav');
+        const navItems = document.querySelectorAll('.menu-nav_item');
+
+        let showMenu = false;
+
+        menuBtn.addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            if (!showMenu) {
+                hamburger.classList.add("open");
+                nav.classList.add('open');
+                menuNav.classList.add('open');
+                navItems.forEach(item => {
+                    item.classList.add('open')
+
+                });
+                showMenu = true;
+            } else {
+                hamburger.classList.remove("open");
+                nav.classList.remove('open');
+                menuNav.classList.remove('open');
+                navItems.forEach(item => {
+                    item.classList.remove('open')
+
+                });
+                showMenu = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
